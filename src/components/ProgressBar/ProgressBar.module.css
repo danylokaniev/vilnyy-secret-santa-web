@@ -1,6 +1,5 @@
 .progress {
    background-color: var(--greenSecondary);
-   height: 60px;
    width: 100%;
    border-radius: 24px;
    overflow: hidden;

@@ -1,0 +1,32 @@
+.progress {
+   background-color: var(--greenSecondary);
+   height: 60px;
+   width: 100%;
+   border-radius: 24px;
+   overflow: hidden;
+}
+
+.progressLine {
+   background-color: var(--green);
+   border-radius: 24px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.percent {
+   color: var(--white);
+   margin-right: 48px;
+   margin-left: auto;
+   font-weight: 800;
+   font-size: 32px;
+   line-height: 33px;
+}
+
+.amountCollected {
+   margin-left: 20px;
+   font-weight: 700;
+   font-size: 22px;
+   line-height: 27px;
+   color: var(--white);
+}

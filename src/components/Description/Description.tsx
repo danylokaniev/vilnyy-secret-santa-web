@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import style from './Description.module.css';
 
 const Description = () => {
@@ -10,6 +11,7 @@ const Description = () => {
           <span>Спільнота Вільного</span>, яка зробить найбільший донат отримає подяку від Дані.
         </p>
       </div>
+      <Button title={'Підтримати'} />
     </div>
   );
 };

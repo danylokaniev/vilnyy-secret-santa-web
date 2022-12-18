@@ -1,0 +1,26 @@
+.description {
+   margin-top: 90px;
+   max-width: 420px;
+}
+
+.descriptionTitle {
+   margin-top: 90px;
+   font-weight: 800;
+   font-size: 32px;
+   line-height: 33px;
+}
+
+.descriptionContent {
+   margin-top: 24px;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 18px;
+}
+
+.descriptionContent>p {
+   margin: 8px 0;
+}
+
+.descriptionContent span {
+   font-weight: bold;
+}

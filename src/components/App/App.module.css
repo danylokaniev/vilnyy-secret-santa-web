@@ -1,0 +1,8 @@
+.app {
+   padding-left: 100px;
+   padding-right: 100px;
+   height: 100%;
+   background-position: right top;
+   background-repeat: no-repeat;
+   background-size: contain;
+}

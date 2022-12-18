@@ -1,8 +1,34 @@
+@font-face {
+  font-family: 'ObjectSans';
+  src: url(./fonts/ObjectSans-Regular.otf) format('otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url(./fonts/ObjectSans-Slanted.otf) format('otf');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url(./fonts/ObjectSans-Heavy.otf) format('otf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url(./fonts/ObjectSans-HeavySlanted.otf) format('otf');
+  font-style: italic;
+  font-weight: bold;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: ObjectSans, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,8 +38,8 @@ code {
     monospace;
 }
 
-
-#root  {
+#root {
   width: 100vw;
   height: 100vh;
+  font-family: 'ObjectSans';
 }

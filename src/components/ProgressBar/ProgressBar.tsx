@@ -2,16 +2,16 @@ import React from 'react';
 import style from './ProgressBar.module.css';
 
 interface ProgressBarProps {
-  now: number;
+  percent: number;
   amountCollected?: number;
 }
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ now, amountCollected }) => {
+const ProgressBar: React.FC<ProgressBarProps> = ({ percent, amountCollected }) => {
   return (
     <div className={style.progress}>
-      <div className={style.progressLine} style={{ width: `${now}%` }}>
+      <div className={style.progressLine} style={{ width: `${percent}%` }}>
         {!amountCollected ? (
-          <div className={style.percent}>{`${now}%`}</div>
+          <div className={style.percent}>{`${percent}%`}</div>
         ) : (
           <div className={style.amountCollected}>
             {'Зібрано: '}

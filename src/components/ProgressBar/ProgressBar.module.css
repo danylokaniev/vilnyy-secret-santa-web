@@ -15,17 +15,14 @@
 
 .percent {
    color: var(--white);
-   margin-right: 48px;
+   margin-right: 24px;
    margin-left: auto;
    font-weight: 800;
-   font-size: 32px;
-   line-height: 33px;
+   font-size: 20px;
 }
 
 .amountCollected {
    margin-left: 20px;
    font-weight: 700;
-   font-size: 22px;
-   line-height: 27px;
    color: var(--white);
 }

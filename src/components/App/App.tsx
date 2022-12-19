@@ -3,6 +3,7 @@ import Description from '../Description/Description';
 import Header from '../Header/Header';
 import Title from '../Title/Title';
 import TotalCollect from '../TotalCollect/TotalCollect';
+import VilnyyCards from '../VilnyyCards/VilnyyCards';
 import style from './App.module.css';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <Header />
       <Title />
       <Description />
-      <TotalCollect />
+      <TotalCollect percent={66} />
+      <VilnyyCards />
     </div>
   );
 }

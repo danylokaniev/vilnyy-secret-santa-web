@@ -1,21 +1,18 @@
 .description {
-   margin-top: 90px;
-   max-width: 420px;
+   margin-top: 48px;
+   max-width: 380px;
 }
 
 .descriptionTitle {
-   margin-top: 90px;
    font-weight: 800;
    font-size: 32px;
-   line-height: 33px;
 }
 
 .descriptionContent {
-   margin-top: 24px;
-   margin-bottom: 32px;
+   margin-top: 18px;
+   margin-bottom: 24px;
    font-weight: 400;
    font-size: 18px;
-   line-height: 18px;
 }
 
 .descriptionContent>p {

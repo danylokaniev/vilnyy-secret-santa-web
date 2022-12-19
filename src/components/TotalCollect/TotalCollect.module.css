@@ -1,22 +1,39 @@
 .total {
-   margin-top: 64px;
+   margin-top: 48px;
+   margin-bottom: 32px;
    background-color: var(--gray);
-   padding: 80px;
+   padding: 32px;
    display: flex;
    flex-flow: column;
    align-items: center;
+   border-radius: 12px;
 }
 
-.totalTitle {
+.title {
    font-weight: 800;
-   font-size: 36px;
-   line-height: 37px;
+   text-align: center;
+   font-size: 28px;
 }
 
-.totalCollected {
+.collected {
    font-weight: 800;
-   font-size: 85px;
-   line-height: 88px;
-   margin-top: 80px;
-   margin-bottom: 40px;
+   font-size: 32px;
+   margin-top: 16px;
+   margin-bottom: 24px;
+}
+
+.progress {
+   width: 100%;
+}
+
+.content {
+   position: relative;
+}
+
+.content>svg {
+   position: absolute;
+   right: 0;
+   top: -590px;
+   width: 500px;
+   height: 600px;
 }

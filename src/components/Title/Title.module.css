@@ -1,9 +1,9 @@
 .title {
    font-weight: 400;
-   font-size: 64px;
+   font-size: 48px;
 }
 
 .title > p {
    margin: 0;
-   line-height: 64px;
+   line-height: 48px;
 }

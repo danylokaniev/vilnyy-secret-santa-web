@@ -8,17 +8,20 @@ interface VilnyyCardsProps {
 
 const VilnyyCards: React.FC<VilnyyCardsProps> = ({ banks }) => {
   const maxAmount = Math.max(...banks.map((bank) => bank.amount));
+
   return (
     <div className={style.list}>
       <div className={style.title}>Спільноти</div>
-      {banks.map((bank) => (
-        <VilnyyCard
-          title={bank.vilnyy.name}
-          width={Math.ceil((bank.amount / maxAmount) * 100)}
-          amountCollected={bank.amount}
-          monoBankId={bank.vilnyy.bankId}
-        />
-      ))}
+      {banks
+        .sort((a, b) => Number(b.amount) - Number(a.amount))
+        .map((bank) => (
+          <VilnyyCard
+            title={bank.vilnyy.name}
+            width={Math.ceil((bank.amount / maxAmount) * 100)}
+            amountCollected={bank.amount}
+            monoBankId={bank.vilnyy.bankId}
+          />
+        ))}
     </div>
   );
 };

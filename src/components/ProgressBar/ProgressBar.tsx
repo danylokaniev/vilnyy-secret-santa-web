@@ -1,4 +1,5 @@
 import React from 'react';
+import { NumericFormat } from 'react-number-format';
 import style from './ProgressBar.module.css';
 
 interface ProgressBarProps {
@@ -16,9 +17,15 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ width, percent, amountCollect
         ) : (
           <div className={style.amountCollected}>
             {'Зібрано: '}
-            {/* TODO: Put NumberFormat instead of plain string */}
-            {amountCollected}
-            {'грн'}
+            {
+              <NumericFormat
+                decimalScale={0}
+                value={amountCollected}
+                displayType="text"
+                thousandSeparator={' '}
+                suffix={` грн`}
+              />
+            }
           </div>
         )}
       </div>

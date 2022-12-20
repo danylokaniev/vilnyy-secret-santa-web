@@ -2,6 +2,7 @@ import Community from '../../images/community';
 import { VilnyyBank } from '../../interfaces/vilnyy';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import style from './TotalCollect.module.css';
+import { NumericFormat } from 'react-number-format';
 
 interface TotalCollectProps {
   banks: VilnyyBank[];
@@ -27,8 +28,15 @@ const TotalCollect: React.FC<TotalCollectProps> = ({ banks }) => {
     <div className={style.content}>
       <Community />
       <div className={style.total}>
-        <div className={style.title}>Ціль: {goal} гривен на підтримку нашої країни!</div>
-        <div className={style.collected}>Зібрано: {total} грн</div>
+        <div className={style.title}>
+          Ціль:{' '}
+          {<NumericFormat decimalScale={0} value={goal} displayType="text" thousandSeparator={' '} suffix={` грн`} />}{' '}
+          гривен на підтримку нашої країни!
+        </div>
+        <div className={style.collected}>
+          Зібрано:{' '}
+          {<NumericFormat decimalScale={0} value={total} displayType="text" thousandSeparator={' '} suffix={` грн`} />}
+        </div>
         <div className={style.progress}>
           <ProgressBar percent={percent} width={width} />
         </div>

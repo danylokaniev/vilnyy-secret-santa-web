@@ -44,6 +44,10 @@ code {
   font-family: 'ObjectSans';
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --white: #FFFFFF;
   --red: #D23D3E;

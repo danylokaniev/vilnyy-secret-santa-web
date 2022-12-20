@@ -1,21 +1,36 @@
 import Community from '../../images/community';
+import { VilnyyBank } from '../../interfaces/vilnyy';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import style from './TotalCollect.module.css';
 
 interface TotalCollectProps {
-  percent: number;
+  banks: VilnyyBank[];
 }
 
-const TotalCollect: React.FC<TotalCollectProps> = ({ percent }) => {
-  const width = percent < 10 ? 10 : percent > 100 ? 100 : percent;
+const getTotalWidth = (percent: number) => {
+  if (percent < 1) {
+    return 1;
+  }
+  if (percent > 100) {
+    return 100;
+  }
+  return percent;
+};
+
+const TotalCollect: React.FC<TotalCollectProps> = ({ banks }) => {
+  const total = banks.reduce((total, bank) => (total += bank.amount), 0);
+  const goal = process.env.REACT_APP_GOAL;
+  const percent = Math.ceil(total / Number(goal));
+  const width = getTotalWidth(percent);
+
   return (
     <div className={style.content}>
       <Community />
       <div className={style.total}>
-        <div className={style.title}>Ціль: 100 000 гривен на підтримку нашої країни!</div>
-        <div className={style.collected}>Зібрано: 60 000 грн</div>
+        <div className={style.title}>Ціль: {goal} гривен на підтримку нашої країни!</div>
+        <div className={style.collected}>Зібрано: {total} грн</div>
         <div className={style.progress}>
-          <ProgressBar percent={width} />
+          <ProgressBar percent={percent} width={width} />
         </div>
       </div>
     </div>

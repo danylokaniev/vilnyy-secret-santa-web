@@ -1,12 +1,24 @@
+import { VilnyyBank } from '../../interfaces/vilnyy';
 import VilnyyCard from '../VilnyyCard/VilnyyCard';
 import style from './VilnyyCards.module.css';
 
-const VilnyyCards = () => {
+interface VilnyyCardsProps {
+  banks: VilnyyBank[];
+}
+
+const VilnyyCards: React.FC<VilnyyCardsProps> = ({ banks }) => {
+  const maxAmount = Math.max(...banks.map((bank) => bank.amount));
   return (
     <div className={style.list}>
       <div className={style.title}>Спільноти</div>
-      <VilnyyCard title={'#1 | Київ, вул. Волоська'} percent={99} amountCollected={20000} />
-      <VilnyyCard title={'#2 | Київ, вул. Велика Житомирьска'} percent={77} amountCollected={17898} />
+      {banks.map((bank) => (
+        <VilnyyCard
+          title={bank.vilnyy.name}
+          width={Math.ceil((bank.amount / maxAmount) * 100)}
+          amountCollected={bank.amount}
+          monoBankId={bank.vilnyy.bankId}
+        />
+      ))}
     </div>
   );
 };

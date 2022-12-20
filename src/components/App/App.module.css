@@ -6,3 +6,9 @@
    background-repeat: no-repeat;
    background-size: contain;
 }
+
+@media (max-width: 479px) {
+  .app {
+    padding: 0 24px;
+  }
+}

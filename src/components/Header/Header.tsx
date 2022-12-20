@@ -4,7 +4,9 @@ import style from './Header.module.css';
 const Header = () => {
   return (
     <div className={style.header}>
-      <Logo />
+      <a target="_blank" rel="noopener" href="https://vilnyy.co">
+        <Logo />
+      </a>
     </div>
   );
 };

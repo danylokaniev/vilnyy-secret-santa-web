@@ -1,6 +1,7 @@
 .progress {
    background-color: var(--greenSecondary);
    width: 100%;
+   height: 100%;
    border-radius: 24px;
    overflow: hidden;
 }
@@ -11,6 +12,7 @@
    height: 100%;
    display: flex;
    align-items: center;
+   min-width: 6%;
 }
 
 .percent {
@@ -18,11 +20,25 @@
    margin-right: 12px;
    margin-left: auto;
    font-weight: 800;
-   font-size: 20px;
 }
 
 .amountCollected {
    margin-left: 20px;
    font-weight: 700;
    color: var(--white);
+}
+
+
+@media (max-width: 479px) {
+   .percent {
+      margin-right: 4px;
+   }
+
+   .amountCollected {
+      display: none;
+   }
+
+   .progressLine {
+      min-width: 10%;
+   }
 }

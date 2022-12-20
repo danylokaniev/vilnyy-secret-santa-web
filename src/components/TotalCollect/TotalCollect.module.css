@@ -12,18 +12,19 @@
 .title {
    font-weight: 800;
    text-align: center;
-   font-size: 28px;
+   font-size: 24px;
 }
 
 .collected {
    font-weight: 800;
-   font-size: 32px;
-   margin-top: 16px;
+   font-size: 36px;
+   margin-top: 32px;
    margin-bottom: 24px;
 }
 
 .progress {
    width: 100%;
+   height: 32px;
 }
 
 .content {
@@ -36,4 +37,38 @@
    top: -535px;
    width: 450px;
    height: 550px;
+}
+
+.collected>br {
+   display: none;
+}
+
+@media (max-width: 479px) {
+   .title {
+      font-size: 18px;
+      font-weight: 800;
+   }
+
+   .collected {
+      font-size: 28px;
+      font-weight: 400;
+      text-align: center;
+   }
+
+   .collected>span {
+      font-weight: 800;
+      font-size: 32px;
+   }
+
+   .collected>br {
+      display: inline;
+   }
+
+   .content>svg {
+      display: none;
+   }
+
+   .progress {
+      font-size: 14px;
+   }
 }

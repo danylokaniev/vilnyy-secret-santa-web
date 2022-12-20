@@ -34,7 +34,7 @@ const TotalCollect: React.FC<TotalCollectProps> = ({ banks }) => {
           гривен на підтримку нашої країни!
         </div>
         <div className={style.collected}>
-          Зібрано:{' '}
+          Зібрано: <br />
           {<NumericFormat decimalScale={0} value={total} displayType="text" thousandSeparator={' '} suffix={` грн`} />}
         </div>
         <div className={style.progress}>

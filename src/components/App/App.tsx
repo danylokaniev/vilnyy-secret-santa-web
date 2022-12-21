@@ -8,15 +8,19 @@ import VilnyyCards from '../VilnyyCards/VilnyyCards';
 import { getLatestVilnyyBanks } from '../../api/getLatestBanks';
 import style from './App.module.css';
 
-function App() {
+const App = () => {
   const [vilnyyBanks, setVilnyyBanks] = useState<VilnyyBank[]>([]);
 
   useEffect(() => {
-    const getVilnyysBanks = async () => {
+    const updateVilnyysBanks = async () => {
       const banks = await getLatestVilnyyBanks();
       setVilnyyBanks(banks);
     };
-    getVilnyysBanks();
+
+    const banksUpdateInterval = setInterval(() => updateVilnyysBanks(), 2 * 60 * 1000);
+    updateVilnyysBanks();
+
+    return () => clearInterval(banksUpdateInterval);
   }, []);
 
   return (
@@ -28,6 +32,6 @@ function App() {
       <VilnyyCards banks={vilnyyBanks} />
     </div>
   );
-}
+};
 
 export default App;

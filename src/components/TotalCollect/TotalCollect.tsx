@@ -21,7 +21,7 @@ const getTotalWidth = (percent: number) => {
 const TotalCollect: React.FC<TotalCollectProps> = ({ banks }) => {
   const total = banks.reduce((total, bank) => (total += bank.amount), 0);
   const goal = process.env.REACT_APP_GOAL;
-  const percent = Math.ceil(total / Number(goal));
+  const percent = Math.floor((total / Number(goal)) * 100);
   const width = getTotalWidth(percent);
 
   return (

@@ -1,6 +1,6 @@
 .total {
    margin-top: 48px;
-   margin-bottom: 32px;
+   margin-bottom: 24px;
    background-color: var(--gray);
    padding: 32px;
    display: flex;
@@ -43,6 +43,12 @@
    display: none;
 }
 
+@media (max-width: 1260px) {
+   .content>svg {
+      display: none;
+   }
+}
+
 @media (max-width: 479px) {
    .title {
       font-size: 18px;
@@ -70,5 +76,11 @@
 
    .progress {
       font-size: 14px;
+   }
+
+   .total {
+      padding: 16px;
+      margin-top: 24px;
+      margin-bottom: 24px;
    }
 }

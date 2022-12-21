@@ -3,13 +3,20 @@
    font-size: 48px;
 }
 
-.title > p {
+.title>p {
    margin: 0;
    line-height: 48px;
+}
+
+@media (max-width: 1260px) {
+   .title {
+      text-align: center;
+   }
 }
 
 @media (max-width: 479px) {
    .title {
       font-size: 32px;
+      text-align: start;
    }
 }

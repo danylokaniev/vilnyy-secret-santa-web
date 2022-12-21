@@ -27,9 +27,18 @@
    display: none;
 }
 
+
+@media (max-width: 1260px) {
+   .description {
+      text-align: center;
+      margin: 48px auto;
+   }
+}
+
 @media (max-width: 479px) {
    .description {
       margin-top: 0;
+      text-align: start ;
    }
 
    .title {

@@ -27,13 +27,13 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ width, percent, amountCollect
   return (
     <div className={style.progress}>
       <div className={style.progressLine} style={{ width: `${width}%` }}>
-        {!amountCollected ? (
-          <div className={style.percent}>{`${percent}%`}</div>
-        ) : (
+        {amountCollected !== undefined ? (
           <div className={style.frontText}>{textContent}</div>
+        ) : (
+          <div className={style.percent}>{`${percent}%`}</div>
         )}
       </div>
-      {amountCollected && <div className={style.backText}>{textContent}</div>}
+      {amountCollected !== undefined && <div className={style.backText}>{textContent}</div>}
     </div>
   );
 };

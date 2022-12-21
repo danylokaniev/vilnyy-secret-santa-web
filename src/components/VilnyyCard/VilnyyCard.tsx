@@ -26,7 +26,6 @@ const VilnyyCard: React.FC<VilnyyCardProps> = ({ width, title, amountCollected, 
       <div className={style.collectedMobile}>
         <div>
           {'Зібрано: '}
-
           <span>
             {
               <NumericFormat

@@ -1,0 +1,16 @@
+.footer {
+   margin-top: 24px;
+   margin-bottom: 12px;
+   font-size: 12px;
+   text-align: center;
+}
+
+.link {
+   margin-left: 4px;
+   color: gray;
+   font-weight: 800;
+}
+
+.link:hover {
+   text-decoration: underline;
+}

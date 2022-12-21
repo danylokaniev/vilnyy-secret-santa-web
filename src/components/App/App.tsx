@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { VilnyyBank } from '../../interfaces/vilnyy';
 import Description from '../Description/Description';
 import Header from '../Header/Header';
@@ -7,6 +7,7 @@ import TotalCollect from '../TotalCollect/TotalCollect';
 import VilnyyCards from '../VilnyyCards/VilnyyCards';
 import { getLatestVilnyyBanks } from '../../api/getLatestBanks';
 import style from './App.module.css';
+import Footer from '../Footer/Footer';
 
 const App = () => {
   const [vilnyyBanks, setVilnyyBanks] = useState<VilnyyBank[]>([]);
@@ -30,6 +31,7 @@ const App = () => {
       <Description />
       <TotalCollect banks={vilnyyBanks} />
       <VilnyyCards banks={vilnyyBanks} />
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import Community from '../../images/community';
-import Button from '../Button/Button';
+import { VILNYYS_ANCHOR_ID } from '../../utils/constants';
+import { LinkButton } from '../Button/Button';
 import style from './Description.module.css';
 
 const Description = () => {
@@ -15,7 +16,7 @@ const Description = () => {
           <span>Спільнота Вільного</span>, яка зробить найбільший донат отримає подяку від Дані.
         </p>
       </div>
-      <Button title={'Підтримати'} />
+      <LinkButton title={'Підтримати'} id={VILNYYS_ANCHOR_ID} />
     </div>
   );
 };

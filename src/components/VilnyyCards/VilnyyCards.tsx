@@ -1,4 +1,5 @@
 import { VilnyyBank } from '../../interfaces/vilnyy';
+import { VILNYYS_ANCHOR_ID } from '../../utils/constants';
 import VilnyyCard from '../VilnyyCard/VilnyyCard';
 import style from './VilnyyCards.module.css';
 
@@ -10,7 +11,7 @@ const VilnyyCards: React.FC<VilnyyCardsProps> = ({ banks }) => {
   const maxAmount = Math.max(...banks.map((bank) => bank.amount));
 
   return (
-    <div className={style.list}>
+    <div className={style.list} id={VILNYYS_ANCHOR_ID}>
       <div className={style.title}>Спільноти</div>
       {banks
         .sort((a, b) => Number(b.amount) - Number(a.amount))
@@ -18,7 +19,7 @@ const VilnyyCards: React.FC<VilnyyCardsProps> = ({ banks }) => {
           <VilnyyCard
             index={index + 1}
             title={bank.vilnyy.name}
-            width={Math.ceil((bank.amount / maxAmount) * 100)}
+            width={Math.floor((bank.amount / maxAmount) * 100)}
             amountCollected={bank.amount}
             monoBankId={bank.vilnyy.bankId}
           />

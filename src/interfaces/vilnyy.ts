@@ -1,9 +1,8 @@
 export interface VilnyyBank {
-  id: number;
   vilnyy: Vilnyy;
+  vilnyyId: number;
   goal: number;
   amount: number;
-  createdAt: string;
 }
 
 export interface Vilnyy {

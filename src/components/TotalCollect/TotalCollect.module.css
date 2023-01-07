@@ -43,6 +43,10 @@
    display: none;
 }
 
+.collected span.currency {
+   font-size: 0.9em;
+}
+
 @media (max-width: 1260px) {
    .content>svg {
       display: none;

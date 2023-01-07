@@ -31,11 +31,12 @@ const TotalCollect: React.FC<TotalCollectProps> = ({ banks }) => {
         <div className={style.title}>
           Ціль:{' '}
           {<NumericFormat decimalScale={0} value={goal} displayType="text" thousandSeparator={' '} suffix={` грн`} />}{' '}
-          гривен на підтримку нашої країни!
+          на квадрокоптери Mavic
         </div>
         <div className={style.collected}>
           Зібрано: <br />
-          {<NumericFormat decimalScale={0} value={total} displayType="text" thousandSeparator={' '} suffix={` грн`} />}
+          {<NumericFormat decimalScale={0} value={total} displayType="text" thousandSeparator={' '} />}{' '}
+          <span className={style.currency}>грн</span>
         </div>
         <div className={style.progress}>
           <ProgressBar percent={percent} width={width} />

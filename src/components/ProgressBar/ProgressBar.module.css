@@ -45,13 +45,18 @@
    z-index: 3;
 }
 
+.percent>span {
+   font-size: 0.8em;
+}
+
 
 @media (max-width: 479px) {
    .percent {
       margin-right: 4px;
    }
 
-   .frontText, .backText {
+   .frontText,
+   .backText {
       display: none;
    }
 

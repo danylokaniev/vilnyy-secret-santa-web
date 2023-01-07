@@ -30,7 +30,10 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ width, percent, amountCollect
         {amountCollected !== undefined ? (
           <div className={style.frontText}>{textContent}</div>
         ) : (
-          <div className={style.percent}>{`${percent}%`}</div>
+          <div className={style.percent}>
+            {percent}
+            <span>%</span>
+          </div>
         )}
       </div>
       {amountCollected !== undefined && <div className={style.backText}>{textContent}</div>}

@@ -17,6 +17,7 @@ const VilnyyCards: React.FC<VilnyyCardsProps> = ({ banks }) => {
         .sort((a, b) => Number(b.amount) - Number(a.amount))
         .map((bank, index) => (
           <VilnyyCard
+            key={bank.vilnyyId}
             index={index + 1}
             title={bank.vilnyy.name}
             width={Math.floor((bank.amount / maxAmount) * 100)}

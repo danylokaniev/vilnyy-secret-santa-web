@@ -9,6 +9,8 @@ import { getLatestVilnyyBanks } from '../../api/getLatestBanks';
 import style from './App.module.css';
 import Footer from '../Footer/Footer';
 
+const updateBanksMinutesInterval = Number(process.env.REACT_APP_UPDATE_BANKS_MINUTES_INTERVAL);
+
 const App = () => {
   const [vilnyyBanks, setVilnyyBanks] = useState<VilnyyBank[]>([]);
 
@@ -18,7 +20,7 @@ const App = () => {
       setVilnyyBanks(banks);
     };
 
-    const banksUpdateInterval = setInterval(() => updateVilnyysBanks(), 2 * 60 * 1000);
+    const banksUpdateInterval = setInterval(() => updateVilnyysBanks(), updateBanksMinutesInterval * 60 * 1000);
     updateVilnyysBanks();
 
     return () => clearInterval(banksUpdateInterval);

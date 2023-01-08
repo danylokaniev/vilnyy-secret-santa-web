@@ -20,6 +20,11 @@
    margin: 8px 0;
 }
 
+.content>p:first-child {
+   margin: 8px 0;
+   hyphens: auto;
+}
+
 .content span {
    font-weight: bold;
 }
@@ -39,11 +44,11 @@
 @media (max-width: 479px) {
    .description {
       margin-top: 0;
-      text-align: start ;
+      text-align: start;
    }
 
    .title {
-      font-size: 20px;
+      font-size: 22px;
       flex: 1;
       margin-bottom: 40px;
    }

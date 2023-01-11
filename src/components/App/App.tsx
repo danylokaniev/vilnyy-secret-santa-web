@@ -8,6 +8,7 @@ import VilnyyCards from '../VilnyyCards/VilnyyCards';
 import { getLatestVilnyyBanks } from '../../api/getLatestBanks';
 import style from './App.module.css';
 import Footer from '../Footer/Footer';
+import Present from '../Present/Present';
 
 const updateBanksMinutesInterval = Number(process.env.REACT_APP_UPDATE_BANKS_MINUTES_INTERVAL);
 
@@ -32,6 +33,7 @@ const App = () => {
       <Title />
       <Description />
       <TotalCollect banks={vilnyyBanks} />
+      <Present />
       <VilnyyCards banks={vilnyyBanks} />
       <Footer />
     </div>

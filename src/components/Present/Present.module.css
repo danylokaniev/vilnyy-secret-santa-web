@@ -1,0 +1,26 @@
+.block {
+   margin-top: 24px;
+   margin-bottom: 24px;
+   background-color: var(--gray);
+   padding: 32px;
+   border-radius: 12px;
+   text-align: center;
+   font-size: 22px;
+   position: relative;
+}
+
+.block>span {
+   font-weight: bold;
+}
+
+.icon {
+   position: absolute;
+   top: 5px;
+   right: 10px;
+   transform: rotate(17deg);
+}
+
+.icon>svg {
+   width: 32px;
+   height: 32px;
+}

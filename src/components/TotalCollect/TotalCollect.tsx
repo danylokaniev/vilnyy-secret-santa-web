@@ -31,7 +31,6 @@ const TotalCollect: React.FC<TotalCollectProps> = ({ banks }) => {
         <div className={style.title}>
           Ціль:{' '}
           {<NumericFormat decimalScale={0} value={goal} displayType="text" thousandSeparator={' '} suffix={` грн`} />}{' '}
-          на квадрокоптери Mavic
         </div>
         <div className={style.collected}>
           Зібрано: <br />

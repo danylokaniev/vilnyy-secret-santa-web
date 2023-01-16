@@ -5,11 +5,15 @@
 
 .title>p {
    margin: 0;
-   line-height: 48px;
+   line-height: 1.2em;
 }
 
 .title span {
    font-weight: bold;
+}
+
+.mobileBreak {
+   display: none;
 }
 
 @media (max-width: 1260px) {
@@ -22,5 +26,13 @@
    .title {
       font-size: 28px;
       text-align: start;
+   }
+
+   .desktopBreak {
+      display: none;
+   }
+
+   .mobileBreak {
+      display: inline;
    }
 }
